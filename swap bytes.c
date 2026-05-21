@@ -38,7 +38,23 @@ int main()
 //  printf("%x\n",temp4);
  printf("%x",ans);
  
- 
+ // Logic 2
+
+   int a = 0xabcdef00; // 00fedcba
+    
+    int f = (a >> 28) &  0x0f;
+    int f1 = (a >> 20) & 0xf0;
+    int f2 = (a >> 12) & 0x0f00;
+    int f3 = (a >> 4) & 0xf000;
+    
+    int g = (a & 0x0f) << 28;
+    int g1 = (a & 0xf0) << 20;
+    int g2 = (a & 0x0f00) << 12;
+    int g3 = (a & 0xf000) << 4;
+    
+    int ans = f | f2 | f3 | f1 | g | g1 | g2 | g3;
+    
+   printf("0x%08x\n", ans);
 
 
 
