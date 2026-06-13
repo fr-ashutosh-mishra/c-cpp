@@ -1,0 +1,22 @@
+// Reverse the Decimal number
+
+#include <stdio.h>
+
+int main()
+{
+    int a = 45678;
+    int rev = 0;
+    while(a)
+    {
+        int n = a%10;
+        
+         rev = (rev*10);
+         rev+=n;
+         
+         a/=10;
+    }
+    
+    printf("%d",rev);
+
+    return 0;
+}
